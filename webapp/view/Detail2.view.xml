@@ -1,0 +1,35 @@
+<mvc:View
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	controllerName="SplitDemo.controller.Detail2"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page
+				title="Product Details"
+				showNavButton="true"
+				navButtonPress="onNavBack">
+					<VBox class="sapUiSmallMargin">
+						<f:SimpleForm
+							editable="true"
+							layout="ResponsiveGridLayout"
+							title="Product Details"	>
+							<f:content>
+								<Label text="Product ID" />
+								<Text text="{productId}" />
+								<Label text="Product Name" />
+								<Text text="{productName}" />
+								<Label text="Product Quantity" />
+								<Text text="{productQuantity}" />
+								<Label text="Product Price" />
+								<Text text="{productPrice}" />
+							</f:content>
+						</f:SimpleForm>
+					</VBox>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

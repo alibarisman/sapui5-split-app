@@ -1,0 +1,33 @@
+<mvc:View 
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns="sap.m" 
+	xmlns:layout="sap.ui.layout"
+	controllerName="SplitDemo.controller.Master"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page 
+				title="Orders List">
+				<List 
+					id="orders" 
+					items="{/orders}"
+					mode="SingleSelectMaster"
+					selectionChange="onSelectionChange">
+					<items>
+						<ObjectListItem
+							title="{orderName}"
+							number="{GrossAmount}"
+							numberUnit="EUR"
+							type="Navigation"
+							press="onSelectionChange">
+							<attributes>
+								<ObjectAttribute text="{BuyerName}" />
+							</attributes>
+						</ObjectListItem>	
+					</items>
+				</List>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
